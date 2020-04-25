@@ -29,7 +29,11 @@ public class DashIptvServer {
 		try {
 			while(true) {
 				String token = in.readLine();
-				out.println(token);
+				
+				out.println("server: "+token);
+				System.out.println(token);
+				if(token.equals("exit"))break;
+				
 			}
 		}catch(SocketException e) {
 			System.out.println(e.getMessage());
